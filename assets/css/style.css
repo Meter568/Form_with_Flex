@@ -5,30 +5,30 @@
 }
 
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
     min-height: 100%;
     background-color: #40A8F5FF;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 form {
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 25px;
-    width: 27vw;
+    max-width: 540px;
 }
 
 .header {
     text-align: center;
     margin-inline: auto;
-    width: 400px;
+    max-width: 400px;
+    margin-top: 40px;
 }
 
 .header > h1 {
@@ -45,12 +45,16 @@ form {
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 13px 0px;
+    max-width: 100%;
 }
 
 .inputs > input {
     padding: 20px;
     border-radius: 5px;
     border: none;
+    width: 100%;
+    min-width: 100px;
+    max-width: 230px;
 }
 
 .inputs > input:focus {
@@ -103,4 +107,12 @@ form {
 
 .btn:hover {
     background-color: #27aeac;
+}
+
+@media (max-width: 502px) {
+    .inputs {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
 }
